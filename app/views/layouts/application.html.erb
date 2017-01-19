@@ -5,35 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title><%= @page_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
-    
+
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
 
           <%= render "shared/application_nav" %>
 
-          <%= login_helper %>
-
           <%= yield %>
-          
+
+          <%= render "shared/application_footer" %>
+
           <%= source_helper("application") %>
+
         </div>
-
       </div>
-
     </div>
   </body>
 </html>
