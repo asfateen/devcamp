@@ -1,11 +1,7 @@
 require_relative 'concerns/devise_whitelist'
 class ApplicationController < ActionController::Base
   include DeviseWhiteList
+  include SetSource
 
-  before_action :set_source
-
-  def set_source
-    session[:source] = params[:q] if params[:q]
-  end
 end
 
