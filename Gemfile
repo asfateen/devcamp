@@ -65,3 +65,5 @@ gem 'friendly_id', '~> 5.5.0'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'petergate', '~> 1.7'
+
+gem 'devcamp_view_tool'
